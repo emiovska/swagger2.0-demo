@@ -15,7 +15,7 @@ There are multiple benefits of using Swagger:
 </dependency>
 ```
 ## 2.1 Integrating Swagger 2 into a Spring Boot Project
-For the purpose od this project I decided to go with Spring because of its easy configuration.
+For the purpose od this project I decided to go with Spring Boot because of its easy configuration.
 The entire Swagger configration is placed in the SwaggerConfig class which basically is a Spring @Configuration class. Swagger 2 is enabled through the @EnableSwagger2 annotation. 
 ```java
 @Configuration
@@ -66,4 +66,26 @@ Swagger UI is a built-in solution which makes user interaction with the Swagger-
 ```
 After the Swagger UI dependency is added to the project, all resources for the API are now visualized through the Swagger UI tool which is available on the following link: 
 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+# 3. Exploring Swagger Documentation
+
+## 3.1 Swagger annotations
+Swagger comes with a set of custom annotations which help to enrich the documentation with some implementation details.
+In this project are covered the following annotations:
+
+- [@Api](http://docs.swagger.io/swagger-core/current/apidocs/index.html?io/swagger/annotations/Api.html) - Marks a class as a Swagger resource.
+The @Api annotation has the following attributes:
+    - description - Custom defined API resource description
+    - produces - Corresponds to the `produces` field of the operations under annotated resource.
+    - tags - A list of tags for API documentation control
+    - ...
+    
+- [@ApiOperation](http://docs.swagger.io/swagger-core/current/apidocs/index.html?io/swagger/annotations/Api.html) - Describes an operation or typically a HTTP endpoint against a specific path.
+
+- [@ApiResponse](http://docs.swagger.io/swagger-core/current/apidocs/index.html?io/swagger/annotations/Api.html) - Describes a possible response of an operation
+
+- [@ResponseHeader](http://docs.swagger.io/swagger-core/current/apidocs/index.html?io/swagger/annotations/Api.html) - Represents a header that can be provided as part of the response 
+
+- [@ApiParam](http://docs.swagger.io/swagger-core/current/apidocs/index.html?io/swagger/annotations/Api.html) - 	Adds additional meta-data for operation parameters
+
 
