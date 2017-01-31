@@ -15,7 +15,7 @@ There are multiple benefits of using Swagger:
 </dependency>
 ```
 ## 2.1 Integrating Swagger 2 into a Spring Boot Project
-For the purpose od this project I decided to go with Spring Boot because of its easy configuration.
+For the purpose of this project I decided to go with Spring Boot because of its easy configuration.
 The entire Swagger configration is placed in the SwaggerConfig class which basically is a Spring @Configuration class. Swagger 2 is enabled through the @EnableSwagger2 annotation. 
 ```java
 @Configuration
@@ -51,7 +51,7 @@ After the above configuration is applied, to verify that Springfox is configured
 
 [http://localhost:8080/v2/api-docs](http://localhost:8080/v2/api-docs)
 
-If the result is a JSON response with large number of key-value pairs then congratulation you successfully set up the Swagger 2 in your project :). The received JSON is relatively large which is not very human-readable. Fortunately, Swagger provides Swagger UI for this purpose. 
+If the result is a JSON response with large number of key-value pairs then congratulations you successfully set up the Swagger 2 in your project :). The received JSON is relatively large which is not very human-readable. Fortunately, Swagger provides Swagger UI for this purpose. 
 
 
 ## 2.4 Swagger UI
